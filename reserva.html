@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <title>Cruzeiro</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="imagens/ship-icon.svg" />
+    <!-- CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./bootstrap/css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="./css/reserva.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <!-- JAVASCRIPT -->
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/paises.js"></script>
+    <script src="js/brasil-estados.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg z-2 p-3 position-absolute start-0 top-0 end-0 d-flex">
+        <a href="/" class="text-decoration-none text-primary fs-3 fw-bold">
+            <img class="ms-lg-5 ms-md-1" src="imagens/leme.svg" width="80px" alt="Leme em azul">
+        </a>
+
+        <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false">Menu</button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-lg-5">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-4 text-center text-primary fs-4"
+                        href="index.html#sobre">Sobre</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-4 text-center text-primary fs-4"
+                        href="index.html#contato">Contato</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-4 text-center text-primary fs-4"
+                        href="index.html#localizacao">Localização</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-4 text-center text-primary fs-4"
+                        href="reserva.html">Reserva</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container form-reserva mb-5 rounded-3 py-3">
+        <h2 class="py-5 text-center">Faça sua reserva</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-8">
+                <form>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome">
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="endereco" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" required>
+                        </div>
+
+                        <div class="col-md-5 mt-3">
+                            <label for="paises-select" class="form-label">País</label>
+                            <select class="form-select" id="paises-select" required>
+                                <option value="">Escolha</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 mt-3">
+                            <label for="brasil-estados-select" class="form-label">Estado</label>
+                            <select class="form-select" id="brasil-estados-select" required>
+                                <option value="">Escolha</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="number" class="form-control" id="cep" required>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3 mt-5">Pagamento</h4>
+
+                    <div class="my-3">
+                        <div class="form-check">
+                            <input id="credito" name="pagamento" type="radio" class="form-check-input" checked=""
+                                required>
+                            <label class="form-check-label" for="credito">Cartão de Crédito</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="debito" name="pagamento" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debito">Cartão de Débito</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="pix" name="pagamento" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="pix">Pix</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+                            <label for="nome-cartao" class="form-label">Nome no cartão</label>
+                            <input type="text" class="form-control" id="nome-cartao" required>
+                        </div>
+
+                        <div class="col-md-6 mt-3">
+                            <label for="numero-cartao" class="form-label">Número do cartão</label>
+                            <input type="text" class="form-control" id="numero-cartao" required>
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <label for="vencimento-cartao" class="form-label">Vencimento</label>
+                            <input type="text" class="form-control" id="vencimento-cartao" required>
+                        </div>
+
+                        <div class="col-md-3 mt-3">
+                            <label for="cvv-cartao" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv-cartao" required>
+                        </div>
+
+                        <div class="col-md-6 mt-3">
+                            <img class="w-100" src="imagens/bandeiras-cartao.png" alt="Bandeiras de cartões">
+                        </div>
+                    </div>
+
+                    <button class="w-100 btn btn-primary btn-lg mt-5 mb-5" type="submit">Reservar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
